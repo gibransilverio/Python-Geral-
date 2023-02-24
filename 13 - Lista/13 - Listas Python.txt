@@ -182,6 +182,8 @@ FUNÇÕES (METHODS) MAIS UTILIZADAS EM LISTA:
 
 
 3  -   [posição]  - Acessar posições da lista pelo índice || Lista vazia: lista_vazia = []
+                                                                          lista_cheia = [1,2,3,4,5]
+                                                                          list_cheia[0] ----> Out: 1
 
 4  -   del()      - Exlcuir um índice especifíco da lista, del também pode deletar a lista completamente ou seja não existe mais
                     del list_name[0]
