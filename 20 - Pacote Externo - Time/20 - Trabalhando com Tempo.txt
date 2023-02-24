@@ -1,0 +1,74 @@
+TRABALHANDO COM TIME:
+
+
+# TIME - 'time' É UM MÓDULO FORNECE VÁRIAS FUNÇÕES RELACIONADAS AO TEMPO
+
+https://www.programiz.com/python-programming/time
+
+https://www.w3schools.blog/python-date
+
+https://www.programiz.com/python-programming/datetime/strftime (STRFTIME)
+
+https://www.programiz.com/python-programming/datetime/strptime (STRPTIME)
+
+
+# IMPORTAR PACOTES E MÓDULOS PRIMEIRO:
+
+1 - import time
+
+print('Esse print foi rápido!')
+time.sleep(2.5) # Bastante usando em Web Scraping
+print('Esse print aconteceu depois de 2.5 segundos \n')
+
+Out: ----> Esse print foi rápido!
+
+Out: ----> Esse print aconteceu depois de 2.5 segundos
+
+
+# Capturar o local agora com 'localtime()':
+
+
+agora = time.localtime()
+print(type(agora))
+print(agora)
+
+Out: ----> <class 'time.struct_time'>
+
+
+# OBS: O 'localtime()' é mostrado em uma estrutura conforme abaixo
+
+Out: ----> time.struct_time(tm_year=2022, tm_mon=3, tm_mday=15, tm_hour=11, tm_min=3, tm_sec=36, tm_wday=1, tm_yday=74, tm_isdst=0)
+
+
+# AJUSTANDO O FORMATO TIME COM 'strftime' e 'localtime()':
+
+time.strftime(format,variable_local_time)
+
+# OBS: %d - dia do mês
+       %B - nome do mês completo
+       %b - nome do mês abreviado
+       %Y - nome do ano completo (2023)
+       %y - nome do ano abreviado (23)
+
+       %H - hora
+       %M - minuto
+       %S  - segundo
+
+now = time.localtime()
+
+print(time.strftime('%m/%d/%Y %H:%M:%S', now)) ----> O 'localtime()'' TRAZ A ESTRUTURA COMPLETA DE ANO, MÊS, DIA, HORA, MINUTO, SEGUNDO
+                                               ----> HORA %H, MINUTO %M, SEGUNDO %S TEM DE ESTAR MAIÚSCULO
+Out: ----> 03/15/2022, 11:03:36
+
+
+# CONVERTER UMA STRING PARA TIME COM 'strptime':
+
+time.strptime(string,format) ----> TEM DE ESTAR COM A ESTRTUTURA DE STRING E FORMAT COMPATÍVEIS
+                             ----> VERIFICAR SE É ANO/MÊS COM NOME COMPLETO OU ABREVIADO E COLOCAR CONFORME A ESTRUTURA PARA TER COMPATIBILIDADE E NÃO RETORNAR UM ERRO
+
+time_texto = '21 June, 2018'
+conversao_time = time.strptime(time_texto, '%d %B, %Y') ----> CONVERTE A STRING DE DATA PARA O FORMATO DE 'time.struct_time'
+
+print(conversao_time)
+
+Out: ----> time.struct_time(tm_year=2018, tm_mon=6, tm_mday=21, tm_hour=0, tm_min=0, tm_sec=0, tm_wday=3, tm_yday=172, tm_isdst=-1)

@@ -1,0 +1,122 @@
+VARIAVÉIS PYTHON:
+
+TIPOS DE VARIÁVEIS PYTHON:
+
+Assim como em um armário podem haver diferentes itens (variáveis), a linguagem Python também possui uma variedade importante de tipificação de dados.
+
+CONFIRA ALGUNS TIPOS:
+
+Tipo texto (str): tipagem de texto em string e caracter
+Tipo inteiro (int): tipagem composta por algarismos numéricos inteiros
+Tipo ponto flutuante ou decimal (float): tipagem composta por algarismos decimais (frações)
+Tipo complexo (complex): tipagem composta por funções matemáticas
+Tipo string (str): tipagem composta por caracteres que formam palavras, frases e textos
+Boolean (bool): tipagem composta por lógicas binárias, ou seja, expressões que podem ser classificadas como verdadeiras ou falsas
+Listas (list): tipagem que serve para agrupar outros tipos de variáveis, ainda que sejam distintas
+Tuplas (tuple): é uma espécie de lista, mas que não permite alterar elementos após a sua criação
+Dicionários (dict): tipagem que estabelece uma relação de chave e valor entre dois elementos, onde o primeiro é a chave e o segundo é o valor.
+
+
+PODEMOS NOMEAR VARIÁVEIS E TIPOS DE DADOS DE DIVERSAS FORMAS:
+
+1 - DECLARAR AS VARIÁVEIS EM UMA ÚNICA LINHA DE COMANDO;
+2 - ATRIBUIR UM VALOR À DIVERSAS VARIÁVEIS;
+3 - DECLARAR USANDO UMA LISTA;
+4 - COMBINAR VARIÁVEIS;
+5 - OPERAR COM OPERADORES MATEMÁTICOS;
+6 - MUITOS OUTROS.
+
+VER TIPO DE VARIVEL - FUNÇÃO - TYPE():
+
+mensagem = 'Exemplo de mensagem!'
+n = 25
+pi = 3.141592653589931
+
+type (mensagem)
+# <class 'str'>
+type (n)
+# <class 'int'>
+type (pi)
+# <class 'float'>
+
+
+# DECLARANDO UM VALOR PARA MÚLTIPLAS VARIÁVEIS EM APENAS UMA LINHA:
+
+fruta1 = fruta2 = fruta3 = "Laranja"
+
+print(fruta1) out: 'Laranja'
+
+print(fruta2) out: 'Laranja'
+
+
+# ATRIBUIR MULTIPLOS VALORES A MULTIPLAS VARIAVEIS EM APENAS UMA LINHA:
+
+codigo, nome, erro = 201, "HTTP CREATED", False
+
+x, y, z, w = 10, 15, 20, 30
+
+
+# NOMEAR VARIÁVEIS COM LISTA:
+
+lista_carros = ['VM','Audi','Tesla']
+marca_01, marca_02,marca_03 = lista_carros
+
+Out: ----> marca_01 = VM
+           marca_02 = Audi
+           marca_03 = Tesla
+
+IMPORTANTE: CONCATENÇÃO DE VARIAVEL É DIFERENTE DE SOMA DE VALOR DA VARIAVEL (STRING - CONCATENA , INT, FLOAT = SOMA)
+
+RECEBENDO DADOS DO USUÁRIO- FUNÇÃO - INPUT():
+
+nome = input("Digite seu nome: ")
+idade = input("Digite sua idade: ")
+peso = input("Digite seu peso: ")
+
+PRINT COM FORMATAÇÃO F-STRING:
+
+print(f"Nome: {nome}")
+print(f"Idade: {idade}")
+print(f"Peso: {peso}")
+
+
+FORMTAÇÃO E TIPOS:
+
+1 - %
+
+2 - "...{},...{} " .format(x,y)
+    "...{0},...{1} " .format("!", "teste")
+     "...{},...{} " .format(x=1, y=2)
+
+PODE-SE, INCLUSIVE, USAR CHAVES DE DICIONÁRIOS ATRAVÉS DE UNPACK COMO NO EXEMPLO A SEGUIR:
+
+pessoa = {'nome': 'Chico', 'idade': 33}
+
+print('Olá, {nome}. Você tem {idade} anos.'.format(**pessoa))
+
+out: Olá, Chico. Você tem 33 anos.
+
+3 - f-string ----> print(f"... {}")
+
+
+https://cienciaprogramada.com.br/2022/03/formatacao-strings-python/
+
+https://www.hashtagtreinamentos.com/f-strings-em-python
+
+
+CRIANDO TIPOS DE INFORMAÇÕES:
+
+String = str('Olá Mundo!')
+Inteiro = int(10)
+Flutuante = float(10.99)
+Complex = complex(1j)
+Lista = list( ('Maça', 'Morango', 'Pera') )
+Tupla = tuple( ('Maça', 'Morango', 'Pera') )
+Range = range(6)
+Dicionario = dict(nome='Odemir', age=29)
+Set = set( ('Maça', 'Morango', 'Pera') )
+Fronzet = frozenset( ('Maça', 'Morango', 'Pera') )
+Boleano = bool(5)
+Bytes = bytes(5)
+ByteArray = bytearray(5)
+Memoryview = memoryview( bytes(5) )

@@ -1,0 +1,85 @@
+INTRODUÇÃO LINGUAGEM PYTHON:
+
+O QUE É PYTHON?
+
+PYTHON É UMA LINGUAGEM DE PROGRAMAÇÃO POPULAR.FOI CRIADO POR GUIDO VAN ROSSUM E LANÇADO EM 1991.
+
+PYTHON PODE SER USADO PARA:
+
+INTELIGÊNCIA ARTIFICIAL;
+MACHINE LEARNING;
+DESENVOLVIMENTO DE SOFTWARE;
+DESENVOLVIMENTO DE APLICATIVOS;
+AUTOMAÇÕES (RPA);
+IOT (INTERNET DAS COISAS);
+
+
+# VERIFICAR VERSÃO DA LINGUAGEM PYTHON
+
+IMPORT: IMPORTAR MÓDULOS NO PYTHON
+
+OBS: SCRIPT PYTHON NA VERDADE É (TAMBÉM) UM MÓDULO
+
+----> IMPORTANTE: from package import item
+
+FROM -> PACOTES -> PACOTE É UMA COLEÇÃO DE MÓDULOS
+
+IMPORT > MÓDULOS > MÓDULO É UM ARQUIVO PYTHON CONTENDO DEFINIÇÕES E INSTRUÇÕES
+
+http://devfuria.com.br/python/modulos-pacotes/
+http://devfuria.com.br/python/imports/
+
+# BIBLIOTECA:PLATFORM E FUNÇÃO: PYTHON_VERSION())
+
+from platform import python_version
+print('Versão da Linguagem Python Usada Neste Jupyter Notebook:', python_version())
+
+
+# INSTALAR PYTHON SITE OFICIAL
+
+# INSTALAR ANACONDA PYTHON
+
+# USAR JUPYTER NOTEBOOK
+
+
+SINTAXE BÁSICA:
+
+PODEMOS UTILZIAR ' ' (ASPAS SIMPLES)
+PODEMOS UTILZIAR " " (ASPAS DUPLAS)
+
+COMENTÁRIOS:
+
+UMA LINHA SE USA: # xxxxx
+
+MAIS DE UMA LINHA SE USA ASPAS ''' xxxxx '''
+
+# CARACTERES DE ESCAPE Python:
+
+https://www.w3schools.com/python/gloss_python_escape_characters.asp
+
+\n - Coloca em uma nova linha ou seja Quebra de Linha (ENTER)
+\t - Espaço tipo o (TAB)
+
+
+TIPOS DE VARIÁVEIS PYTHON:
+
+Tipo inteiro (int): tipagem composta por algarismos numéricos inteiros
+Tipo ponto flutuante ou decimal (float): tipagem composta por algarismos decimais (frações)
+Tipo complexo (complex): tipagem composta por funções matemáticas
+Tipo string (str): tipagem composta por caracteres que formam palavras, frases e textos
+Boolean (bool): tipagem composta por lógicas binárias, ou seja, expressões que podem ser classificadas como verdadeiras ou falsas
+Listas (list): tipagem que serve para agrupar outros tipos de variáveis, ainda que sejam distintas
+Tuplas (tuple): é uma espécie de lista, mas que não permite alterar elementos após a sua criação
+Dicionários (dict): tipagem que estabelece uma relação de chave e valor entre dois elementos, onde o primeiro é a chave e o segundo é o valor.
+
+
+OPERADORES PYTHON:
+
+Operadores aritméticos
+Operadores de atribuição
+Operadores de comparação
+Operadores lógicos
+Operadores de identidade
+Operadores de associação
+
+https://www.devmedia.com.br/operadores-no-python/40693

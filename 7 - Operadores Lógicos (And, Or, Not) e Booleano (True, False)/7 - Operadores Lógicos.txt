@@ -1,0 +1,40 @@
+OPERADORES LÓGICOS:
+
+OPERADOR:	 DEFINIÇÃO:
+
+and	       Retorna True se ambas as condições forem verdadeiras, caso contrário retorna False
+or	       Retorna True se uma das condições for verdadeira, caso contrário retorna False
+not	       Inverte o resultado se o resultado da expressão for True, o operador retorna false
+
+
+TABELA VERDADE DE "AND" E "OR":
+
+TABELA AND:
+
+
+V V - V
+
+V F - F
+
+F V - F
+
+F F - F
+
+
+
+TABELA OR:
+
+
+V V - V
+
+V F - V
+
+F V - V
+
+F F - F
+
+
+IMPORTANTE: VALOR 0 = FALSE
+            DEMAIS VALORES = TRUE
+            STRING VAZIA = FALSE ----> boll("")
+            STRING NÃO VAZIA = TRUE

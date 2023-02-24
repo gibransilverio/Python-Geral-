@@ -1,0 +1,59 @@
+TRABALHANDO COM STATISTICS:
+
+https://docs.python.org/pt-br/3.11/library/statistics.html
+
+https://www.w3schools.com/python/module_statistics.asp
+
+# ESSE MÓDULO FORNECE FUNÇÕES PARA O CÁLCULO DE ESTATÍSTICAS MATEMÁTICAS DE DADOS NUMÉRICOS PARA VALORES DO TIPO REAL
+# INTERAGE COM LISTAS
+# CALCULO DE MÉIDA, MEDIANA, MODA, VARIÂNCIA E DESVIO
+
+
+# IMPORTANDO STATISTICS:
+
+import statistics
+
+
+# CALCULANDO A MÉDIA COM 'sum(lista)/len(lista)':
+
+lista = [12,15,28,56,78,80]
+
+media_lista = sum(lista)/len(lista) (269)     OU    media_lista = statistics.mean(lista)
+
+print(media_lista)
+
+Out: ----> 44.83
+
+
+
+# CALCULANDO A MÉDIA COM 'mean()':
+
+media = statistics.mean([1, 2, 3, 4, 4])
+
+print(f'A Média é: {media} \n')
+
+Out: ---->  A Média é: 2.8
+
+
+
+# CALCULANDO A MEDIANA COM 'median()':
+
+# OBS: A MEDIANA É O VALOR QUE ESTÁ NO CENTRO DA LISTA, CASO SEJA UMA LISTA COM ELEMENTOS PARES PEGA A MÉDIA DOS 2 VALORES DO CENTRO
+
+mediana = statistics.median([1, 2, 3, 4, 4])
+
+print(f'A Mediana é: {mediana} \n')
+
+Out: ----> A Mediana é: 3
+
+
+
+# CALCULANDO A MODA COM 'mode()':
+
+# OBS: A MODA É O VALOR QUE MAIS APARECE NA LISTA
+
+moda = statistics.mode([1, 2, 3, 4, 4])
+
+print(f'A Moda seria: {moda}')
+
+Out: ---->  A Moda é: 4

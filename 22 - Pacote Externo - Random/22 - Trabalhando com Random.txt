@@ -1,0 +1,59 @@
+TRABALHANDO COM RANDOM:
+
+# RANDOM - ESTE MÓDULO IMPLEMENTA GERADORES DE NÚMEROS PSEUDO-ALEATÓRIOS PARA VÁRIAS DISTRIBUIÇÕES
+# PODEMOS SELECIONAR O ELEMENTO DE UMA LISTA DE FORMA ALEATÓRIA/SORTEADA
+# PODEMOS SELECIONAR UM CARACTER DE UMA STRING DE FORMA ALEATÓRIA/SORTEADA
+
+
+https://www.w3schools.com/python/module_random.asp (CONJUNTO DE FUNÇÕES QUE PODEM SER UTILIZADAS COM RANDOM)
+
+
+# IMPORTAR RANDOM:
+
+import random
+
+
+# SELECIONAR O ELEMENTO DE UMA LISTA COM 'choice()':
+
+Exemplo 1:
+
+lista_Numerica = [1, 2, 3, 4, 5, 6]
+
+print(f'O número sorteado foi: {random.choice(lista_numerica)})
+
+Out: ---->  O número sorteado foi: 4
+
+Exemplo 2:
+
+mylist = ["apple", "banana", "cherry"]
+
+print(random.choice(mylist))
+
+Out: ----> cherry
+
+
+# SELECIONAR UM CARACTER DE UMA STRING DE  FORMA ALEATÓRIA/SORTEADA COM 'random.choice()':
+
+palavra = 'Odemir'
+
+print(f'A Letra sorteada foi: {random.choice(palavra)})
+
+Out: ----> A Letra sorteada foi: r
+
+
+# NUMERO ALEATORIO ENTRE 0 E 1 COM 'random.random()':
+
+numero_aleatorio = random.random()
+print(f'O Numero gerado foi: {numero_aleatorio})
+
+Out: ----> O Numero gerado foi: 0.08225511764306459
+
+
+# NUMERO ALEATORIO COM DETERMINADO RANGE COM 'randint()'
+
+random.randint(start, stop) # OBS: NÃO RETIRA NO STOP, O STOP TAMBÉM ENTRA NO RANGE NÃO É STOP-1 NESTE CASO
+
+numero_aleatorio_range = random.randint(0, 10)
+print(f'Número aleatorio entre 1 e 10 foi: {numero_aleatorio_range}')
+
+Out: ----> Número aleatorio entre 1 e 10 foi: 5

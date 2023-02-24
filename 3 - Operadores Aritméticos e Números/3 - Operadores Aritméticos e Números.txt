@@ -1,0 +1,102 @@
+NÚMEROS PYTHON:
+
+TIPOS NÚMERICOS:
+
+int
+float
+complex
+
+x = 10  #int
+y = 10.5  #float
+z = 10+1j  #complex
+
+print(type(x))
+print(type(y))
+print(type(z))
+
+# FUNÇÃO CONVERSÃO (CASTING):
+
+https://www.w3schools.com/python/python_casting.asp
+
+int()
+float()
+str()
+complex()
+list()
+tuple()
+dict()
+set()
+frozenset()
+bool()
+bytes()
+bytearray()
+memoryview(bytes())
+
+
+String = str('Olá Mundo!')
+Inteiro = int(10)
+Flutuante = float(10.99)
+Complex = complex(1j)
+Lista = list( ('Maça', 'Morango', 'Pera') )
+Tupla = tuple( ('Maça', 'Morango', 'Pera') )
+Range = range(6)
+Dicionario = dict(nome='Odemir', age=29)
+Set = set(('A', 'B', 'C'))
+Fronzet = frozenset(('Maça', 'Morango', 'Pera'))
+Boleano = bool(5)
+Bytes = bytes(5)
+ByteArray = bytearray(5)
+Memoryview = memoryview(bytes(5))
+
+
+idade = int(input("Digite sua idade: "))
+type(idade)
+
+peso = float(input("Digite seu peso: "))
+type(peso)
+
+numero = "10"
+print(type(int(numero)))
+
+int(10.5) # Convertendo Float para Inteiro
+
+numero = float(100) # Convertendo Inteiro para Float
+print(type(numero))
+
+int("10") # Convertendo String para Inteiro
+
+
+
+OPERADORES ARITMÉTICOS:
+
+
+1 -  + (Adição ou sinal positivo)	- Realiza a soma entre operandos - Adiciona o sinal de positivo ao número
+2 -  - (Subtração ou sinal negativo)	- Realiza a subtração entre operandos - Adiciona o sinal de negativo ao número
+3 -  * (Multiplicação)	Realiza a multiplicação entre operandos
+4 -  / (Divisão)	Realiza a divisão entre operandos
+5 -  // (Divisão inteira)	Realiza a divisão entre operandos e a parte decimal do resultado
+6 -  % (Módulo)	Retorna o resto da divisão entre operandos
+7 -  ** (Exponenciação)	Retorna um número elevado a potência de outro
+
+
+
+
+Função round():
+
+https://www.w3schools.com/python/ref_func_round.asp
+
+# Quando trabalhamos com números flutuantes, podemos arredondar o valor usando um comando nativo do Python que é o 'round()'
+
+Sintaxe: round(number, digits)
+
+x = round(5.76543, 2)  # OBS: APÓS VERIFICAR O TERCEIRO NÚMOERO NESTE CASO APÓS O '.' SE FOR DE '0' A '4' ELE NÃO ARREDONDA E MANTÉM O '5.76',
+                         CASO SE FOR DE '5+' ELE ARREDONDA PARA '5.77'
+print(x)
+
+Out: ----> 5.77
+
+
+y = round(5.76443, 2)
+print(y)
+
+Out: ----> 5.76

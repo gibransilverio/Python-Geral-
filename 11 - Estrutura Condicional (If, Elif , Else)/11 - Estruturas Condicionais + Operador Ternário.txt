@@ -1,0 +1,52 @@
+ESTRUTURAS CONDICIONAIS PYTHON + OPERADOR TERNÁRIO:
+
+IMPORTANTE: TER CUIDADO AO ESPAÇEMENTO DAS INSTRUÇÕES IF, ELIF, ELSE  (INDENTAÇÃO)
+
+IMPORTANTE: IDENTAÇÃO DO CÓDIGO É FEITO COM 4 ESPAÇOS
+            IF DENTRO DE IF VERIFICAR 4 ESPAÇOS + 4 ESPAÇOS
+
+1 - If
+
+- AVALIA TRUE E FALSE
+- TRUE EXECUTA O CÓDIGO, FALSE PULA O CÓDIGO
+
+2 - Elif (Else If)
+
+- AO UTILIZAR O ELIF APENAS UM DAS OPÇÕES É EXECUTADA MESMO QUE AS DEMAIS TAMBÉM SEJAM CONDIÇÕES VERDADEIRAS
+
+3 - Else
+
+- EXECUTADO CASO O IF SEJA AVALIADO COMO FALSE
+
+
+# OBS: SE USA JUNTAMENTE COM OPERADORES LÓGICOS AND, OR E NOT
+# OBS: SE USA JUNTAMENTE COM OPERADORES DE ATRIBUIÇÃO
+
+
+IMPORTANTE: VALOR 0 = FALSE
+            DEMAIS VALORES = TRUE
+            STRING VAZIA = FALSE ----> bool("")
+            STRING NÃO VAZIA = TRUE
+
+senha = input("Digite uma senha"
+
+if senha:
+  print("Senha válida"
+
+else:
+  print("A senha não pode estar em branco")
+
+# Observe que o if recebe o valor de uma string contida na variável senha, se ela tiver conteúdo o if é verdadeiro, caso esteja vazia é avaliado como falso
+
+
+
+Operador ternário
+
+O operador ternário é uma sintaxe para analisar expressão condicional de forma compacta em uma única linha:
+Expressão é quem indica se vai escrever a direita o verdadeiro ou a esquerda o falso
+
+Expressão: saída_verdadeira if expressão else saída_falsa
+
+umidade = 60
+"Úmido" if umidade >= 50 else "Seco"
+Out: ----> 'Úmido'

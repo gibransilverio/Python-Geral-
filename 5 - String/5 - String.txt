@@ -1,0 +1,480 @@
+STRING E FUNÇÕES USADAS EM STRING:
+
+
+nome = "UserPython" # String se comporta como um array, cada elemento pertence a uma posição começando de 0
+
+nome[0] # Out: U
+
+
+Strig com operador aritméticos:
+
+
+1 - Concatenção
+
+nome = 'João'
+idade = str(30)
+
+usuario = nome + ' ele tem ' + idade + ' anos.'
+
+Out: João ele tem 30 anos.
+
+2 - Operador Multiplicação com String (Forma de mostrar a mesma string 'x' vezes)
+
+nome = 'João'
+valor = 2
+
+multiplicacao_string =  nome * 2
+
+Out: JoãoJoão
+
+
+
+ATENÇÃO !!   SLICE()  VS SLICING
+
+SLICE   - FUNÇÃO FATIAR   slice(start, stop, step)  OBS: No 'STOP' o elemento não aparece ou seja (stop - 1)
+
+SLICING - FATIAMENTO DE STRING [:] [::]
+
+
+
+# SLICING - FATIAMENTO DE STRING:
+
+# USA OS ":"
+
+# PODEMOS USAR UM ":" PARA EXECUTAR UM SLICING QUE FAZ A LEITURA DE TUDO ATÉ UM PONTO DESIGNADO
+
+# O FATIAMENTO SLICING É EXCLUSIVO DE EXCLUIR NÃO INCLUSIVO
+
+# NÓS TAMBÉM PODEMOS USAR A NOTAÇÃO DE ÍNDICE E FATIAR A STRING EM PEDAÇOS ESPECÍFICOS (O PADRÃO É 1)
+
+# POR EXEMPLO, PODEMOS USAR DOIS PONTOS DUAS VEZES "::" EM UMA LINHA E EM SEGUIDA, UM NÚMERO QUE ESPECIFICA A FREQUÊNCIA PARA RETORNAR ELEMENTOS
+
+# SLICING USAR -1 SIGNIFICA USAR A INDEXAÇÃO NEGATIVA E LER DE TRÁS PARA FRENTE
+
+https://www.w3schools.com/python/python_strings_slicing.asp
+
+
+s [start:stop:step]
+
+s = 'Data Science Academy'
+
+s[:3]
+
+out: 'Dat'
+
+s[::1]
+
+'Data Science Academy'
+
+s[::2]
+
+out: 'Dt cec cdm'
+
+
+VALIDAÇÕES EM STRINGS (TRUE, FALSE):
+
+a = "Python World"
+
+"Python" in a
+out: True
+
+"Java" in a
+out: False
+
+nome = "UserPython"
+
+nome not in "UserPython UserPython"
+out: False  # Fale pois o nome está dentro dessa String
+
+
+
+
+COMPARANDO STRINGS:
+
+print("Python" == "R")
+
+out: False
+
+print("Python" == "Python")
+
+out: True
+
+
+
+
+FUNÇÕES USADAS EM STRING:
+
+I - len()
+
+II - split()
+
+III - replace()
+
+IV - strip()
+
+V - title()
+
+VI - upper()
+
+VII - lower()
+
+VIII - capitalize()
+
+IX - count()
+
+X - find()
+
+XII - center()
+
+XIII - isalnum()
+
+XIV - isalpha()
+
+XV - islower()
+
+XV - isspace()
+
+XVI - startswith()
+
+XVII - endswith()
+
+XVIII - isdigit()
+
+XIX - partition()
+
+XX - index()
+
+XXI - join()
+
+
+*************  ARRUMAR AS FUNÇÕES ***************
+
+
+# FUNÇÃO LEN - Calcular o tamanho da lista nisto nos mostra a quantidade de elementos desta lita,
+               quando o objeto é uma string a função retorna o número de caracteres na string (Não é índice, então começa por 1)
+
+Lista = [1, 2, 3, 4, 5]
+Dicionario = { 'Nome':'Odemir', 'Idade':29, 'Vip':False }
+Tupla = (10, 20)
+String = 'Olá Mundão!'
+
+print(len(Lista)) ----> 5
+print(len(Dicionario)) ----> 3
+print(len(Tupla)) ----> 2
+print(len(String)) ----> 11 # OBS: ESPAÇO EM BRANCO TAMBÉM CONTA
+
+
+# FUNÇÃO UPPER - CONVETER PARA MAIUSCULO UPPER CASE
+
+upper()
+
+
+# FUNÇÃO LOW - CONVETER PARA MINUSCULO LOWER CASE
+
+low()
+
+
+
+# FUÇÃO SPLIT - MÉTODO QUE DIVIDE UMA STRING EM UMA LISTA DE CARACTERES
+
+DIVIDIR UMA STRING POR ESPAÇOS EM BRANCO (PADRÃO)
+DIVIDE UMA STRING EM UMA LISTA, ONDE CADA PALAVRA É UM ITEM DA LISTA
+CASO QUANDO VOCÊ NÃO PASSA NENNHUM PARAMETRO DE SEPERADOR ELE PEGA OS ESPAÇOS EM BRACO QUE É O PADRÃO
+OS ESPAÇO EM BRANCO TAMBÉM SÃO CARACTERES
+PODE PASSAR UM CARACTER ESPECÍFICO, NO CASO ELE VAI BUSCAR PELO CARACTERE 'X' E AI FAZ A QUEBRA, LEMBRANDO QUE O CARACTERE 'X' NÃO É MOSTRADO
+PARAMETRO DENTRO DO SPLIT NÃO É MOSTRADO
+
+string.split(separator, maxsplit)
+
+split()
+
+a = 'Isso é uma string'
+print(a.split())
+
+out:
+['Isso', 'é', 'uma', 'string']
+
+split(',')
+
+
+
+# FUNÇÃO CAPITALIZE - CONVERTE A PRIMEIRA LETRA DA STRING PARA MAIUSCULA
+
+capitalize()
+
+nome = 'gibran'
+
+nome.capitalize()
+
+Out: ----> 'Gibran'
+
+
+# FUNÇÃO COUNT - RETORNA O NÚMERO DE ELEMENTOS COM O VALOR ESPECIFICADO
+# ANALISAR SE É UMA STRING COMPLETA (PALAVRA) OU SE É ELEMENTOS (CARACTER - LETRA) E ASSIM CONTAR A QUANTIDADE
+
+count()
+
+fruits = ("apple, banana, cherry")
+
+x = fruits.count("a") ---> 4
+
+print(x)
+
+
+fruits = ["apple", "banana", "cherry"]
+
+x = fruits.count("cherry")
+
+print(x) ----> 1
+
+
+
+# FUNÇÃO FIND - ENCONTRA A POSIÇÃO DE UM DETERMINADO CARACTER NA STRING, LEMBRANDO QUE COMEÇA COM 0 A CONTAGEM
+
+find('a')
+
+
+
+# FUNÇÃO ISLOWER - RETORNA TRUE SE TODOS OS CARACTERES ESTIVEREM EM MINÚSCULAS, CASO CONTRÁRIO, FALSE.
+
+islower()
+
+
+# FUNÇÃO ISSPACE - VERIFICA SE TODA A  STRING É APENAS ESPAÇO (RETORNA BOOLEAN - TRUE OR FALSE)
+# STRING APENAS ESPAÇO RETORNA: TRUE
+# STRING TIVER ALGUM CARACTER RETORNA: FALSE
+
+isspace()
+
+
+
+# FUNÇÃO ENDSWITH - RETORNA TRUE SE A STRING TERMINAR COM O VALOR ESPECIFICADO, CASO CONTRÁRIO, FALSE.
+# STRING.ENDSWITH(VALUE, START, END) ----> PEGA INICIO E FIM MENOS A ULTIMA POSIÇÃO NO CASO DO END
+
+string.endswith(value, start, end)
+
+endswith()
+
+txt = "Hello, welcome to my world."
+
+x = txt.endswith("Hello", 0, 4)
+
+print(x) ----> FALSE
+
+txt = "Hello, welcome to my world."
+
+x = txt.endswith("Hello", 0, 5)
+
+print(x) ----> TRUE
+
+
+# FUNÇÃO CENTER - COMPLETA STRING COM O PARÂMETRO PASSADO  - SE NÃO COLOCAR NADA COMO PARAMETRO ELE PEGA O ESPAÇO EM BRANCO QUE É O PADRÃO
+
+string.center(length, character)
+
+txt = "banana"
+
+x = txt.center(20)
+
+print(x)
+
+txt = "banana"
+
+x = txt.center(20,'s')
+
+print(x)
+
+
+# FUNÇÃO ISALNUM - RETORNARÁ TRUE SE TODOS OS CARACTERES FOREM ALFANUMÉRICOS, OU SEJA, LETRA DO ALFABETO (A-Z) E NÚMEROS (0-9)
+# EXEMPLO DE CARACTERES QUE NÃO SÃO ALFANUMÉRICOS: (ESPAÇO)!#%&? ----> RETORNA FALSE
+
+txt = "Company 12"
+
+x = txt.isalnum()
+
+print(x)
+
+Out: ----> FALSE # Neste caso tem um espaço
+
+
+# FUNÇÃO ISALPHA()  - RETORNARÁ TRUE SE TODOS OS CARACTERES FOREM LETRAS APENAS (A-Z)
+
+txt = "Company"
+
+x = txt.isalnum()
+
+print(x)
+
+Out: ----> True
+
+
+# FUNÇÃO PARTITION - PROCURA UMA STRING OU CARACTER ESPECIFICADO E DIVIDE A STRING EM UMA TUPLA CONTENDO TRÊS ELEMENTOS
+
+# O PRIMEIRO ELEMENTO CONTÉM A PARTE ANTES DO PARAMETRO DA STRING ESPECIFICADA
+# O SEGUNDO  ELEMENTO CONTÉM A STRING ESPECIFICADA ----> PARAMETRO
+# O TERCEIRO ELEMENTO CONTÉM A PARTE APÓS O PARAMETRO
+# CASO NÃO ENCONTRAR O PARAMETRO ELE COLOCA VAZIO
+
+
+txt = "I could eat bananas all day teste"
+
+x = txt.partition("teste")
+
+print(x)
+out: ('I could eat bananas all day ', 'teste', '')
+
+
+txt = "I could eat bananas all day teste"
+
+x = txt.partition("eat")
+
+print(x)
+out: ('I could ', 'eat', ' bananas all day teste')
+
+
+# FUNÇÃO ISDIGIT - RETORNA TRUE CASO A STRING SEJA SOMENTE NÚMEROS
+
+isdigit()
+
+
+# FUNÇÃO REPLACE - SUBSTITUI UMA STRING OU CARACTER ESPECÍFICO POR OUTRO
+
+string.replace(oldvalue, newvalue, count)
+
+oldvalue	Required. The string to search for
+newvalue	Required. The string to replace the old value with
+count	Optional. A number specifying how many occurrences of the old value you want to replace. Default is all occurrences
+
+# OBS: O COUNT MOSTRA QUANTAS OCORRÊNCIA DA PALAVRA OU CARACTER VOCÊ QUER TROCAR
+
+CPF = 'CPF:74116169153'
+
+int(CPF.repleace('CPF',''))
+
+print(CPF)
+
+Out: ---->  74116169153
+
+
+
+txt = "I like bananas"
+
+x = txt.replace("a", "A")
+
+print(x)
+
+out: I like bAnAnAs
+
+txt = "I like bananas"
+
+x = txt.replace("a", "A", 2)
+
+print(x)
+
+out: I like bAnAnas
+
+
+
+txt = "I like bananas"
+
+x = txt.replace("bananas", "apples")
+
+print(x)
+
+out: I like apples
+
+
+# FUNÇÃO STRIP - O strip() remove todos os caracteres iniciais (espaços no início) e finais (espaços no final)
+                 Por default se não colocar nada dentro da função ele remove os espaços em branco
+
+txt = "     banana     "
+
+x = txt.strip()
+
+print(x)
+out: banana
+
+
+string.strip(characters)
+txt = ",,,,,rrttgg.....banana....rrr"
+
+x = txt.strip(",.grt")
+
+print(x)
+out: banana
+
+
+# FUNÇÃO TITLE: O title() retorna uma string em que o primeiro caractere de cada palavra é maiúsculo ou seja como um cabeçalho ou um título
+
+txt = "welcome to my 2nd world"
+
+x = txt.title()
+
+print(x)
+out: Welcome To My 2Nd World
+
+
+nome = "   gibran gomes silverio    "
+
+nome.strip().title()
+
+print(nome)
+out: Gibran Gomes Silverio
+
+
+# FUNÇÃO FIND: A função find() retorna em qual posição inicial se encontra o parametro passado
+               Começa a procura pelo índice 0
+               Caso ela não encontre nada ele nos retorna o valor -1
+
+frase = 'Hoje o dia está calor !!!!'
+
+frase.find('dia')
+
+Out: ----> 7
+
+
+frase = 'Hoje o dia está calor !!!!'
+
+frase.find('zzzzz')
+
+Out: ----> -1
+
+
+# FUNÇÃO INDEX: O index() localiza a primeira ocorrência do valor especificado
+                O index() irá gerar uma exceção se o valor não for encontrado
+                O index() é quase igual ao find() método, a única diferença é que o find() retorna -1 caso o valor não seja encontrado
+
+
+
+string.index(value, start, end)  Start= Padrão início da string (Não colocar nada é Default)
+                                 End = Padrão final da string   (Não colocar nada é Default)
+
+
+
+txt = "Hello, welcome to my world."
+
+x = txt.index("welcome")
+
+print(x)
+out: 7
+
+txt = "Hello, welcome to my world."
+
+x = txt.index("welcome", 2,15)
+
+print(x)
+out: 7
+
+txt = "Hello, welcome to my world."
+
+x = txt.index("c", 1, 11)
+
+print(x)
+out: 10
+
+
+# FUNÇÃO JOIN:
+
+https://www.programiz.com/python-programming/methods/string/join
+
+string.join(iterable)

@@ -1,0 +1,216 @@
+TRABALHANDO COM DATETIME:
+
+
+# DATETIME - 'datetime' É UM PACOTE DE MÓDULOS PARA SE TRABALHAR COM DATA E OBJETOS DE DATA
+
+https://www.w3schools.com/python/python_datetime.asp
+
+https://acervolima.com/como-adicionar-e-subtrair-dias-usando-datetime-em-python/
+
+https://www.alura.com.br/artigos/lidando-com-datas-e-horarios-no-python
+
+https://www.programiz.com/python-programming/datetime/strftime (STRFTIME)
+
+https://www.programiz.com/python-programming/datetime/strptime (STRPTIME)
+
+
+
+type ('01/01/2022')
+
+Out: ----> str
+
+# IMPORTAR PACOTES E MÓDULOS PRIMEIRO:
+
+1 - from datetime import datetime (Caso para não precisar digitar datetime.datetime)
+2 - import datetime
+
+
+# DIA DE HOJE SÓ COM A  DATA E SEM HORAS:
+
+1 - now().date()
+2 - today().date()
+
+dia_hoje = datetime.datetime.now().date()          # OBS: datetime(É o pacote).datetime(É uma função do pacote).now().date()(É uma função do datetime)
+print( f'Hoje é: {dia_Hoje} \n' )
+
+Out: ----> Hoje é: 2022-03-15
+
+
+dia_hoje = datetime.datetime.today().date()
+print( f'Hoje é: {dia_Hoje} \n' )
+
+Out: ----> Hoje é: 2022-03-15
+
+type(dia_hoje) Out: ----> datetime.datetime
+
+
+
+# DIA DE HOJE COM HORAS:
+
+1 - now()
+2 - today()
+
+dia_hoje_horas = datetime.datetime.now()
+print( f'Data e horas de hoje é: {dia_hoje_horas} \n' )
+
+Out: Data e horas de hoje é: 2022-03-15 18:14:19.306141
+
+
+dia_hoje_horas = datetime.datetime.today()
+print( f'Data e horas de hoje é: {dia_hoje_horas} \n' )
+
+Out: Data e horas de hoje é: 2022-03-15 18:14:19.306141
+
+
+# CONSTRUINDO UMA DATA COM 'date()':
+
+date(year,month,day)
+datetime.date(year,month,day)
+
+data_antiga1 = datetime.date(2020, 10, 1)
+print( f'Construindo uma Data {data_antiga1} \n' )
+
+Out: ----> Construindo uma Data 2020-10-01
+
+
+
+# ACESSANDO OS ATRIBUTOS DE UMA DATA:
+
+Exemplo 1:
+
+Ano = data_antiga1.year
+Mes = data_antiga1.month
+Dia = data_antiga1.day
+print(f'Hoje é dia {Dia} do mês {Mes} do ano de {Ano} \n')
+
+Out: ----> Hoje é dia 1 do mês 10 do ano de 2020
+
+
+Exemplo 2:
+
+data_antig2 = datetime.datetime.today()
+
+Ano = data_antiga2.year
+Mes = data_antiga2.month
+Dia = data_antiga2.day
+print(f'Hoje é dia {Dia} do mês {Mes} do ano de {Ano} \n')
+
+Out: ----> Hoje é dia 22 do mês 2 do ano de 2023
+
+
+
+
+# OPERAÇÃO COM DATA:
+
+dia_hoje = datetime.datetime.today().date()
+
+data_antiga_criada = datetime.date(2020, 10, 1)
+
+calculo_data = dia_hoje - data_antiga_criada
+
+print(f'Já ocorreu {calculo_data} dias \n')
+
+Out: ----> Já ocorreu 872 days, 0:00:00 dias
+
+
+
+# AJUSTANDO O FORMATO DA DATA COM '.strftime':
+
+OBS: CASOS PARA ALTERAR O FORMATO AMERICA QUE É YEAR/MONTH/DAY
+
+A REFERENCE OF ALL THE LEGAL FORMAT CODES: https://www.w3schools.com/python/python_datetime.asp
+
+FORMAT CODE LIST 'STRFTIME': https://www.programiz.com/python-programming/datetime/strftime
+
+dia_hoje = datetime.datetime.today().date()
+
+data_formatada1 = dia_hoje.strftime('%d/%m/%y')
+print( f'Hoje é: {data_formatada1}'')
+
+Out: ----> Hoje é: 15/03/22
+
+data_formatada2 = dia_hoje.strftime('%d-%m-%Y')   # OBS: y - 22 , Y - 2022
+print( f'Hoje é: {data_formatada2')
+
+Out: ----> Hoje é: 15-03-2022
+
+
+
+# AUMENTAR DIAS OU DIMINUIR DIAS DE UMA DATA COM 'timedelta()':
+
+Syntax : datetime.timedelta(days=0, seconds=0, microseconds=0, milliseconds=0, minutes=0, hours=0, weeks=0)
+
+
+Exemplo1:
+
+dia_hoje = datetime.datetime.today().date()
+
+print( f'Somando 30 dias, {dia_hoje + datetime.timedelta(days = 30)}' )
+print( f'Diminuindo 30 dias, {dia_hoje - datetime.timedelta(days = 30)}' )
+
+Out: ----> Somando 30 dias, 2022-04-14
+Out: ----> Diminuindo 30 dias, 2022-02-13
+
+
+Exemplo2:
+
+import datetime
+
+data = datetime.datetime.today().date()
+
+valor_dia = timedelta(6)
+
+soma_data = data + valor_dia
+
+print(soma_data)
+
+
+Exemplo3:
+
+import datetime
+
+data = datetime.datetime.today().date()
+
+valor_soma = datetime.timedelta(days = 6)
+
+soma_data = data + valor_dia
+
+print(soma_data)
+
+
+
+# CONVERTER UMA STRING PARA DATETIME COM 'strptime':
+
+----> IMPORTANTE: VOCÊ NÃO PODE CRIAR DATETIME OBJETO DE CADA STRING. A STRING PRECISA ESTAR EM UM DETERMINADO FORMATO PARA NÃO GERAR UM ERRO
+
+FORMAT CODE LIST 'STRPTIME': https://www.programiz.com/python-programming/datetime/strptime
+
+Exemplo 1:
+
+# OBS: O FORMATO DE CONVERSÃO TEM DE ESTAR CORRETO DE ACORDO COM A STRING, NISTO AMBAS TEM DE ESTAR DE ACORDO PARA CONVERSÃO SE NÃO IRÁ GERAR UM ERRO
+
+import datetime
+
+
+string_data = "21/05/2023 09:15:32"
+
+
+time_convertido = datetime.datetime.strptime(string_data, "%d/%m/%Y %H:%M:%S")
+
+print("data = ", time_convertido)
+
+
+Exemplo 2:
+
+# OBS: O FORMATO DE CONVERSÃO TEM DE ESTAR CORRETO DE ACORDO COM A STRING, NISTO AMBAS TEM DE ESTAR DE ACORDO PARA CONVERSÃO SE NÃO IRÁ GERAR UM ERRO
+
+from datetime import datetime
+
+
+string_data = "05/21/23 09:15:32"
+
+time_convertido = datetime.strptime(string_data, "%m/%d/%y %H:%M:%S")
+
+print("data = ", time_convertido)
+
+Out: ---> data =  2023-05-21 09:15:32

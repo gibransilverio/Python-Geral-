@@ -1,0 +1,228 @@
+LIST EM PYTHON:
+
+https://www.w3schools.com/python/python_ref_list.asp
+
+
+ESTRTURA:    ORDENADO:   MUTÁVEL:   CONSTRUTOR:     EXEMPLO:
+
+LIST         SIM         SIM        [] ou list()    [1,2.5,'Pedro','True']
+
+# AS LISTAS SÃO USADAS PARA ARMAZENAR VÁRIOS ITENS EM UMA ÚNICA VARIÁVEL
+# É UM DOS 4 TIPOS DE DADOS INTERNOS DO PYTHON USADOS PARA ARMAZENAR COLEÇÕES DE DADOS OS OUTROS 3 SÃO TUPLE, SET E DICTIONARY
+# LISTA - É MUTÁVEL  VS STRING - IMUTÁVEL
+# OS ITENS DA LISTA SÃO ORDENADOS, ALTERÁVEIS ​​E PERMITEM VALORES DUPLICADOS
+# OS ITENS DA LISTA SÃO INDEXADOS, O PRIMEIRO ITEM POSSUI ÍNDICE [0], O SEGUNDO ITEM POSSUI ÍNDICE [1]
+# QUANDO DIZEMOS QUE AS LISTAS ESTÃO ORDENADAS, SIGNIFICA QUE OS ITENS TÊM UMA ORDEM DEFINIDA, E ESSA ORDEM NÃO SERÁ ALTERADA A NÃO SE POR MÉTODOS DE LIST()
+# LISTA SÃO INDEXADAS POR ISTO PERMITEM DADOS DUPLICADOS OU SEJA DUPLICIDADE
+
+
+
+lista_vazia = []
+
+lista = ['A', 'B', 'C']
+
+lista[0] ---> Out: 'A'
+
+
+
+MODIFICAÇÃO DOS ELEMENTOS DE UMA LISTA:
+
+lista[0] = 'Z'
+
+lista[0] ---> Out: 'Z'
+
+
+
+INDEXAÇÃO POSITIVA E NEGATIVA:
+
+lista = ['A', 'B', 'C']
+
+1 - INDEX POSITIVO (ESQUERDA PARA DIREITA 0 COMEÇO):
+
+lista[2] ---> Out: 'C'
+
+
+2 - INDEX NEGATIVO (DIREITA PARA ESQUERDA -1 COMEÇO):
+
+lista[-3] ---> Out: 'A'
+
+
+
+MÉDIA DE UMA LISTA (LISTA COM NÚMEROS):
+
+# OBS: PODE SE USAR A FUNÇÃO 'statistics.mean(lista_number)'
+
+lista_number = [1,2,3,4,5,6,7,8,9,10]
+
+media = sum(lista_number)/len(lista_number) ----> Out: 5.5
+
+print(f'{media:.2f}') ----> Out: 5.50
+
+
+
+CONCATENAR/UNIR LISTA:
+
+lista1 = ['A', 'B', 'C']
+lista2 = ['D', 'E', 'F']
+
+uniao = lista1 + lista2 ----> Out: ['A', 'B', 'C','D', 'E', 'F']
+
+
+
+REPETIR ELEMENTOS DE UMA LISTA:
+
+lista_repetir = [1,2,3,4]
+
+lista_repetir * 2 ----> Out: [1,2,3,4,1,2,3,4]
+
+
+
+CONSTRUTOR:
+
+list()
+
+tupla = (1,2,3,4,5,6)
+
+lista = list(tupla) ----> Out: [1,2,3,4,5,6]
+
+
+
+STRING EM LISTA - split():
+
+- FUNÇÃO QUE CONVERTE UMA STRING EM LISTA
+- PODE OU NÃO PASSAR UM SEPARADOR, O SEPARADOR PADRÃO É O ESPAÇO EM BRANCO
+- DIVIDE UMA STRING EM UMA LISTA, ONDE CADA PALAVRA É UM ITEM DA LISTA
+- CASO QUANDO VOCÊ NÃO PASSA NENNHUM PARAMETRO DE SEPERADOR ELE PEGA OS ESPAÇOS EM BRACO QUE É O PADRÃO
+- OS ESPAÇO EM BRANCO TAMBÉM SÃO CARACTERES
+- PODE PASSAR UM CARACTER ESPECÍFICO, NO CASO ELE VAI BUSCAR PELO CARACTERE 'X' E AI FAZ A QUEBRA, LEMBRANDO QUE O CARACTERE 'X' NÃO É MOSTRADO
+- PARAMETRO DENTRO DO SPLIT NÃO É MOSTRADO
+
+string.split(separator, maxsplit)
+
+texto = 'Eu%amo%aprender%Python !'
+
+print(texto.split(sep = '%')) ----> Out = ['Eu', 'amo', 'aprender', 'Python !']
+
+
+
+CRIANDO LISTA DE NÚMERO INTEIROS  - range():
+
+OBS: Stop não é incluído
+     Start padrão é índice 0
+     Step padrão é de 1 em 1
+
+range(start, stop, step)
+
+serie = list(range(2010,2021))
+
+print(serie) ----> Out: [2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,]
+
+
+DEFININDO LISTA EM TERMOS DE VARIÁVEIS:
+
+num1 = 10
+num2 = 20
+num3 = 30
+
+lista = [num1,num2,num3]
+print(lista) ----> Out: [10,20,30]
+
+
+
+DESEMPACOTANDO LISTAS:
+
+lista_valores = [350, 400, 900, 120]
+num1, num2, num3, num4 = lista_valores
+
+Out: num1 = 350
+     num2 = 400
+     num3 = 900
+     num4 = 120
+
+
+
+FATIAMENTO DE LISTAS (slicing):
+
+# SLICING - FATIAMENTO DE LISTA/STRING
+# USA OS :
+# PODEMOS USAR UM ":" PARA EXECUTAR UM SLICING QUE FAZ A LEITURA DE TUDO ATÉ UM PONTO DESIGNADO
+# O FATIAMENTO SLICING É EXCLUSIVO DE EXCLUIR NÃO INCLUSIVO, NÃO MOSTRA O VALOR DE STOP
+# NÓS TAMBÉM PODEMOS USAR A NOTAÇÃO DE ÍNDICE E FATIAR A STRING EM PEDAÇOS ESPECÍFICOS (O PADRÃO É 1)
+# POR EXEMPLO, PODEMOS USAR DOIS PONTOS DUAS VEZES "::" EM UMA LINHA E EM SEGUIDA, UM NÚMERO QUE ESPECIFICA A FREQUÊNCIA PARA RETORNAR ELEMENTOS
+# SLICING USAR -1 SIGNIFICA USAR A INDEXAÇÃO NEGATIVA E LER DE TRÁS PARA FRENTE
+
+
+
+lista = [1,2,3,4,5,6,7,8]
+
+lista[:4]  ---->  Out: [1, 2, 3, 4]
+
+lista[::2] ---->  Out: [1, 3, 5, 7]
+
+
+
+VERIFICANDO SE UM OU MAIS ELEMENTOS ESTÃO CONTIDOS EM UMA LISTA (In, Not In):
+
+lista = ['F','M','J','K','G','P']
+
+'F' in lista     ----> Out: True
+
+'F' not in lista ----> Out: False
+
+
+
+FUNÇÕES (METHODS) MAIS UTILIZADAS EM LISTA:
+
+1  -   append()   - Para adicionar um item ao final da lista, recebe apenas um elemento para adicionar por vez, este elemento pode ser uma lista, tupla, dict
+                    Ex: lista.append([nome,quantidade,preco]) ----> Um elemento apenas ou seja uma lista apenas com 3 valores dentro dela
+                    Ex: lista.append([nome,quantidade,preco],{chave:valor}) ----> Não aceita mais de um elemento
+
+2  -   len()      - Calcular o tamanho da lista nisto nos mostra a quantidade de elementos desta lita,
+                    quando o objeto é uma string a função retorna o número de caracteres na string (Não é índice, então começa por 1)
+
+
+3  -   [posição]  - Acessar posições da lista pelo índice || Lista vazia: lista_vazia = []
+
+4  -   del()      - Exlcuir um índice especifíco da lista, del também pode deletar a lista completamente ou seja não existe mais
+                    del list_name[0]
+                    del list_name
+
+5  -   clear()    - Limpar a lista, deixa a lista vazia
+
+6  -   insert()   - Para inserir um item de lista em um índice especificado
+                    lista.insert(index,object)
+
+7  -   extend()   - Adiciona os elementos de um interável como lista,tupla,dict,string ao final de uma lista, ou seja apenas os elementos não a lista, tupla, dict em si
+                    No dicionário ele só adiciona  apenas o a chave
+                    Se passar uma string cada caracter desta se torna um índice na lista
+
+8  -   remove()   - Remove o item especificado como por exemplo um caracter, string, number
+
+9  -   pop()      - Remove o índice especificado, aceita somente números pois refere-se a índices
+                    Remove e retorna qual índice foi removido
+                    Default é -1 ou seja ele remove o último item da lista, caso não passe nada
+
+10 -   sort()     - Ordena os valores da lista, por Padrão reverse=Faslse (Ordem crescente) , reverse=True (Ordem decrescente)
+                    list.sort(reverse=False|True, key=myFunc)  key = Função que específica  o critério que o sort() irá usar
+                    https://www.w3schools.com/python/ref_list_sort.asp
+
+11 -   copy()     - Faz uma copia da Lista
+
+12 -   index()    - Identifica o índice do elemento passado da lista, no caso mostra o índice da primeira ocorrência na lista
+                    Pode específicar apartir de qual posição deve se iniciar a pesquisa para encontrar o índice e qual deve parar
+                    index(value,start=0,stop-1) Stop = Não mostra o último elemento, para antes dele
+
+
+13 -   reverse()  - Inverte a ordem dos elementos na lista
+
+14 -   count()    - Conta a quantidade de vezes que o elemento aparece na lista
+
+15 -   max(lista) - Retorna o valor máximo da lista, se for string retorna a maior string, se for número retorna o maior número ou seja o maior elemento da lista
+
+16 -   min(lista) - Retorna o valor mínimo da lista, se for string retorna a menor string, se for número retorna o menor número ou seja o menor elemento da lista
+
+17 -   sum(lista) - Retorna a soma dos elementos da lista, estes tendo que ser números e pode ser usado também com um optional
+       math.fsum()  https://www.programiz.com/python-programming/methods/built-in/sum
+
+18 -   split()    - Método que divide uma string em uma lista
+                    https://www.w3schools.com/python/ref_string_split.asp

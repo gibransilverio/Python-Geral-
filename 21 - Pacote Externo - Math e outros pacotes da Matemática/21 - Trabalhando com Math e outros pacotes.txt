@@ -1,0 +1,96 @@
+TRABALHANDO COM PACOTE DA MATEMÁTICA MATH E OUTROS:
+
+https://www.w3schools.com/python/module_math.asp
+
+# MATH - O PYTHON POSSUI UM CONJUNTO DE FUNÇÕES MATEMÁTICAS INTEGRADAS, INCLUINDO UM EXTENSO MÓDULO 'math()' QUE PERMITE REALIZAR TAREFAS MATEMÁTICAS EM NÚMEROS
+
+# NO PYTHON TEMOS OUTROS MÓDULOS MATEMÁTICOS COMO 'min()','max()','pow()' E DEMAIS OUTROS QUE SÃO BASTANTES USADOS
+
+
+
+# MININO E MAXIMO:
+
+tupla = (10, 15, 5, 8, 20)
+print(min(tupla))
+print(max(tupla))
+
+Out: ----> 5
+Out: ----> 20
+
+
+# FUNÇÃO 'abs()' RETORNA O VALOR ABSOLUTO (POSITIVO) DO NÚMERO ESPECIFICADO:
+
+print(abs(-7.25) )
+
+Out: ----> 7.25
+
+
+# MÓDULO pow() - RETORNA A POTÊNCIA:
+
+pow(numero,potencia_numero_elevado)
+
+print(pow(3,4))
+
+Out: ----> 81  # OBS: (SERIA O MSM QUE 3 * 3 * 3 * 3)
+
+
+# MÓDULO math():
+
+import math
+
+# RAIZ QUADRADA DE UM NÚMERO:
+
+raiz_quadrada1 = math.sqrt(81)
+print(raiz_quadrada1)
+
+Out: ----> 9.0
+
+raiz_quadrada2 = math.sqrt(int(pow(3,4)))
+print(raiz_quadrada2)
+
+Out: ----> 9
+
+# ARRENDONDAMENTO DE UM NÚMERO COM 'ceil()' e 'floor()' e 'round()':
+
+1 - CEIL: Arredonda um número para cima até o número inteiro mais próximo :
+
+print(math.ceil(1.4))
+
+Out: ----> 2
+
+
+2 - FLOOR - ARREDONDA UM NÚMERO PARA BAIXO ATÉ O NÚMERO INTEIRO MAIS PRÓXIMO:
+
+print(math.floor(1.4))
+
+Out: ----> 1
+
+
+3 - ARRENDONDAMENTO DE UM NÚMERO COM 'round()':
+
+# O 'round()' é nativo do python não depende de outro módulo
+
+round(number, digits)
+
+x = round(5.76543, 2)  # OBS: APÓS VERIFICAR O TERCEIRO NÚMOERO NESTE CASO APÓS O '.' SE FOR DE '0' A '4' ELE NÃO ARREDONDA E MANTÉM O '5.76',
+                         CASO SE FOR DE '5+' ELE ARREDONDA PARA '5.77'
+print(x)
+
+Out: ----> 5.77
+
+
+y = round(5.76443, 2)
+print(y)
+
+Out: ----> 5.76
+
+
+# RETORNA O NUMERO DE PI:
+
+print(math.pi)
+
+Out: ----> 3.141592653589793
+
+print(f'PI: {math.pi:.2f}')
+
+Out: ----> PI: 3.14
