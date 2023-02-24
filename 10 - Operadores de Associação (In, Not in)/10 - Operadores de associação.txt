@@ -1,0 +1,13 @@
+OPERADORES DE ASSOCIAÇÃO:
+
+OS OPERADORES DE ASSOCIAÇÃO SÃO USADOS ​​PARA TESTAR SE UMA SEQUÊNCIA É APRESENTADA EM UM OBJETO:
+
+in ->     (Retorna True se uma sequência com o valor especificado estiver presente no objeto)
+not in -> (Retorna True se uma sequência com o valor especificado não estiver presente no objeto)
+
+# OBS: BASTANTE USADO COM LAÇO 'FOR x in y'
+
+Lista_Ações = ['Magalu', 'Via', 'Assai', 'Carrefour']
+
+print( 'Via' in Lista_Ações ) ----> Out: True
+print( 'Via' not in Lista_Ações ) ----> Out: False

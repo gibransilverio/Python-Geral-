@@ -1,0 +1,74 @@
+OPERADORES DE COMPARAÇÃO OU RELACIONAIS:
+
+# RELAÇÃO COM BOOLEANOS - TRUE OR FALSE 
+
+Operador:	  Nome:	           Função:
+
+==	        Igual a	         Verifica se um valor é igual ao outro
+!=	        Diferente de	   Verifica se um valor é diferente ao outro
+>	          Maior que	       Verifica se um valor é maior que outro
+>=	        Maior ou igual	 Verifica se um valor é maior ou igual ao outro
+<	          Menor que	       Verifica se um valor é menor que outro
+<=	        Menor ou igual	 Verifica se um valor é menor ou igual ao outro
+
+
+10 == 10
+
+out: True
+
+10 != 10
+
+out: False
+
+10 != 2
+
+out: True
+
+
+string1 = "Python"
+string2 = "JavaScript"
+resultado = len(string1) > len(string2)
+
+print(resultado)
+out: False
+
+var = 5
+
+if var == 5:
+    print('Os valores são iguais')
+
+if var != 7:
+    print('O valor não é igual a 7')
+
+if var > 2:
+    print('O valor da variável é maior de 2')
+
+if var >= 5:
+    print('O valor da variável é maior ou igual a 5')
+
+if var < 7:
+    print('O valor da variável é menor que 7')
+
+if var <= 5:
+    print('O valor da variável é menor ou igual a 5')
+
+out:
+
+Os valores são iguais
+O valor não é igual a 7
+O valor da variável é maior de 5
+O valor da variável é maior ou igual a 5
+O valor da variável é menor que 7
+O valor da variável é menor ou igual a 5
+
+
+
+numero_1 = 2
+numero_2 = 4
+
+soma = numero_1 + numero_2
+
+if soma < 10:
+    print("soma não é maior que 10")
+else:
+    print("soma é maior ou igual a 10")

@@ -1,0 +1,105 @@
+DICT EM PYTHON:
+
+https://www.w3schools.com/python/python_dictionaries.asp
+
+# NO DICT SE USA CHAVE:VALOR {'chave':'valor'} {"chave":"valor"} ----> {'chave1':'valor1','chave2':'valor2'}
+# USAMOS DICT PARA CRIAR DATAFRAMES NA BIBLIOTECA PANDAS (DATASCIENCE)
+# UTILIZA ASPAS SIMPLES OU DUPLAS DENTRO DE CHAVE E VALOR
+# É ORDENADO OU SEJA TEM-SE INDEXAÇÃO PORÉM NÃO PERMITE DUPLICIDADE IGUAL A LISTA E TUPLA
+# MUTÁVEL ONDE PODE INSERIR DADOS, EXCLUIR DADOS, ALTERAR DADOS
+# NÃO PERMITE DOIS ITENS COM A MESMA CHAVE, NESTE CASO O VALOR DUPLICADO SUBSTITUIRÃO OS VALORES EXISTENTES OU SEJA O VALOR NOVO SUBSTUTI O VALOR VELHO
+# CASOS DE VALORES NÚMERO OU TRUE - FALSE NÃO SE COLOCA ENTRE ASPAS
+
+
+OBS: A PARTIR DA VERSÃO 3.7 DO PYTHON, OS DICIONÁRIOS SÃO ORDENADOS . NO PYTHON 3.6 E ANTERIORES, OS DICIONÁRIOS NÃO SÃO ORDENADOS.
+
+
+dict_vazio = {}
+
+dados = {'nome': 'PS4', 'valor': 2500, 'estoque': 50}
+
+
+ACESSSANDO O VALORES DAS CHAVES DO DICT:
+
+dados['nome']
+Out ----> 'PS4'
+
+dados['valor']
+Out: ----> 2500
+
+
+MUDANDO VALORES DO DICT:
+
+1 - SEM FUNÇÃO - MANUAL:
+
+dados = {'nome': 'PS4', 'valor': 2500, 'estoque': 50}
+
+dados ['chave'] = 'novo_valor'
+
+dados['nome'] = 'PS5'
+
+Out: ----> dados = {'nome': 'PS5', 'valor': 2500, 'estoque': 50}
+
+
+2 - USANDO FUNÇÃO UPDATE():
+
+dados.update({'nome': 'PS5'})
+
+Out: ----> dados = {'nome': 'PS5', 'valor': 2500, 'estoque': 50}
+
+
+FUNÇÕES (METHODS) MAIS UTILIZDAS EM DICT:
+
+https://www.w3schools.com/python/python_ref_dictionary.asp
+
+
+1 - clear()       - Remove todos os elementos do dicionário
+
+
+2 - copy()        - Faz uma cópia do dicionário
+
+
+3 - update()      - Atualiza o dicionário com os pares de 'chave' : 'valor' especificados
+                    dictionary.update(iterable)
+                    dictionary.update({'chave':' valor'})
+
+
+4 - get()         - Traz o valor da chave especificada que é passada dentro da função
+                    dictionary.get(keyname, value)
+                    dictionary.get(keyname)
+
+
+5 - items()       - Retorna uma lista contendo uma tupla para cada par chave-valor
+                    dictionary.items()
+                    Out ----> dict_items([('chave1','valor1'), ('chave2','valor2'), ('chave3','valor3')])
+
+6 - keys()        - Retorna uma lista contendo as chaves do dicionário
+                    dictionary.keys()
+                    Out ----> dict_keys(['chave1', 'chave3', 'chave3'])
+
+
+7 - pop()         - Passar a chave especificada para remover o valor dela, o valor removido é retornado
+                    É diferente de list, neste caso aqui passa o elemento chave, não o índice númerico como na list
+                    dictionary.pop(keyname)
+                    Nenhum item com a chave especificada for encontrado, um erro será gerado
+
+
+8 - popitem()     - Remove o último par chave-valor inserido
+                    dictionary.popitem()
+
+
+9 - setdefault()  - Retorna o valor da chave especificada. Se a chave não existir: insira a chave, com o valor especificado
+                    dictionary.setdefault(keyname, value)
+                    Se a chave existir, este parâmetro não terá efeito
+                    Se a chave não existir, esse valor se tornará o valor da chave
+                    https://www.w3schools.com/python/ref_dictionary_setdefault.asp
+
+
+10 - fromkeys()   - Cria um dicionário com as chaves e valor especificado, este valor é o mesmo para todas as chaves
+                    dict.fromkeys(keys, value)
+
+
+11 - values()     - Retorna uma lista contendo todos os valores do dicionário
+                    Quando um valor é alterado no dicionário, o objeto view também é atualizado
+                    dict_values(['value1', 'value2', value3])
+                    dictionary.values()

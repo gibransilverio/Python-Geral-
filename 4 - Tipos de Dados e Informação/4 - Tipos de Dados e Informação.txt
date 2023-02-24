@@ -1,0 +1,59 @@
+TIPOS DE DADOS:
+
+# Esses tipos de dados podem receber qualquer tipo de informação, inclusive Operações Aritméticas
+
+1 - Listas - São criadas usando [ ] (Colchetes)   ou construtor list() -> Coleção ordenada de valores, separados por vírgula (Pode ser Modificada)
+
+2 - Tuplas - São criadas usando ( ) (Parenteses)  ou construto tuple() -> São imutaveis (Não modifica)
+
+3 - Dicionários - São criadas usando { } (Chaves) ou construtor dict() -> São para organizar os dados (Chave, Valor)
+
+4 - Set - São criadas usando { } (Chaves) -> Conjunto  (set) é uma coleção não ordenada , imutável* e não indexada
+                                          -> Os itens definidos não podem ser alterados, mas você pode remover itens e adicionar novos itens.
+
+
+TIPOS DE ESTRUTURAS DE DADOS:
+
+1 - DADOS ESTRUTURADOS
+
+2 - DADOS SEMIESTRUTURADOS
+
+3 - DADOS NÃO ESTRUTURADOS
+
+
+TIPOS DE INFORMAÇÃO:
+
+# Na programação, o tipo de dados é um conceito importante. Variáveis ​​podem armazenar dados de diferentes tipos, e diferentes tipos podem fazer coisas diferentes.
+# O Python tem os seguintes tipos de dados integrados por padrão, nestas categorias:
+
+1 - Text Type: str
+
+2 - Numeric Types: int, float, complex
+
+3 - Sequence Types: list, tuple, range
+
+4 - Mapping Type: dict
+
+5 - Set Types: set, frozenset
+
+6 - Boolean Type: bool
+
+7 - Binary Types: bytes, bytearray, memoryview
+
+
+CRIANDO TIPOS DE INFORMAÇÕES:
+
+String = str('Olá Mundo!')
+Inteiro = int(10)
+Flutuante = float(10.99)
+Complex = complex(1j)
+Lista = list( ('Maça', 'Morango', 'Pera') )
+Tupla = tuple( ('Maça', 'Morango', 'Pera') )
+Range = range(6)
+Dicionario = dict(nome='Odemir', age=29)
+Set = set( ('Maça', 'Morango', 'Pera') )
+Fronzet = frozenset( ('Maça', 'Morango', 'Pera') )
+Boleano = bool(5)
+Bytes = bytes(5)
+ByteArray = bytearray(5)
+Memoryview = memoryview( bytes(5) )

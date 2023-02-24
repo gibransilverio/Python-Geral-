@@ -1,0 +1,26 @@
+OPERADORES DE IDENTIDADE:
+
+# OS OPERADORES DE IDENTIDADE SÃO USADOS ​​PARA COMPARAR OS OBJETOS, NÃO SE FOREM IGUAIS, MAS SE FOREM REALMENTE O MESMO OBJETO, COM A MESMA LOCALIZAÇÃO DE MEMÓRIA:
+
+== -> Forma mais padrão comumente usada
+
+is ->      (Retorna True se ambas as variáveis ​​forem o mesmo objeto, Retorna False se ambas as variáveis não forem o mesmo objeto)
+is not  -> (Retorna True se ambas as variáveis ​​não forem o mesmo objeto, Retorna False se ambas as variáveis forem o mesmo objeto)
+
+# OBS: O 'is not' é o inverso do 'is'
+
+# OBS: Pode se usar também o '=='
+
+
+string_01 = 'Olá Mundo'
+string_02 = 'Olá Mundo'
+
+print(type(String_01) is type(String_01)) ----> True
+
+print(type(string_01) is not type(string_01)) ----> False
+
+print(string_01 is string_01) ----> True
+
+print(string_01 is string_02) ----> False
+
+print(string_01 is not string_02) ----> True

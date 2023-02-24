@@ -1,0 +1,10 @@
+OPERADORES DE ATRIBUIÇÃO:
+
+OPERADOR	EQUIVALENTE A:
+
+=	        x =  1
++=	      x += 1 -> x = x + 1
+-=	      x -= 1 -> x = x - 1
+*=	      x *= 1 -> x = x * 1
+/=	      x /= 1 -> x = x / 1
+%=	      x %= 1 -> x = x % 1

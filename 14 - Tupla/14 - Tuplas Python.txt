@@ -1,0 +1,38 @@
+TUPLE EM PYTHON:
+
+https://www.w3schools.com/python/python_tuples.asp
+
+ESTRTURA:    ORDENADO:   MUTÁVEL:   CONSTRUTOR:     EXEMPLO:
+
+TUPLE        SIM         NÃO        () ou tuple()   (1,2.5,'Pedro','True')
+
+
+
+# TUPLE É UMA COLEÇÃO ORDENADA E IMUTÁVEL
+# TUPLE SE USA COLCHETES
+# PERMITE VALOR DUPLICADO E SÃO INDEXADAS
+# AS TUPLAS SÃO IMUTÁVEIS, O QUE SIGNIFICA QUE NÃO PODEMOS ALTERAR, ADICIONAR OU REMOVER ITENS APÓS A CRIAÇÃO DA TUPLA
+# SÃO INDEXADAS ONDE OS SEUS INDEX NÃO SÃO ALTERADOS DE POSIÇÃO COMO NO CASO SE USAR O SLICING -1
+# USADAS PARA APRESENTAR DADOS QUE NÃO DEVEM SER ALTERADOS COMO POR EXEMPLO DIAS DAS SEMANA OU DATAS DE UM CALENDÁRIO
+# PARA CRIAR UMA TUPLA COM APENAS UM ITEM, VOCÊ DEVE ADICIONAR UMA VÍRGULA APÓS O ITEM, CASO CONTRÁRIO, O PYTHON NÃO A RECONHECERÁ COMO UMA TUPLA
+
+
+Tuple:
+
+tupla = (1,2,3,4,5,6)
+type (tupla) ----> Out: tuple
+
+tupla = 1,2,3,4,5,6
+type (tupla) ----> Out: tuple
+
+Tuple com 1 único elemento:
+
+tupla = (10,)      OBS: Para criar uma tupla com apenas um item, você deve adicionar uma vírgula após o item, caso contrário, o python não a reconhecerá como uma tupla
+type (tupla) ----> Out: tuple
+
+FUNÇÕES (METHODS) UTILIZDAS EM TUPLAS:
+
+1 - index() - Identifica o índice do elemento passado da tupla, no caso mostra o índice da primeira ocorrência na tupla
+              index(value,start=0,stop-1) Stop = Não mostra o último elemento, para antes dele
+
+2 - count() - Conta o número de vezes que o elemento aparece na tupla
