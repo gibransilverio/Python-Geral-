@@ -169,11 +169,28 @@ lista = ['F','M','J','K','G','P']
 
 'F' not in lista ----> Out: False
 
+DIFERENÇA ENTRE APPEND() VS EXTEND():
+
+a1 = [1, 2]
+a2 = [1, 2]
+b = (3, 4)
+
+Extend:
+
+a1.extend(b)
+print(a1) ----> a1 = [1, 2, 3, 4]
+
+
+Append:
+
+a2.append(b)
+print(a2) ----> a2 = [1, 2, (3, 4)]
 
 
 FUNÇÕES (METHODS) MAIS UTILIZADAS EM LISTA:
 
-1  -   append()   - Para adicionar um item ao final da lista, recebe apenas um elemento para adicionar por vez, este elemento pode ser uma lista, tupla, dict
+1  -   append()   - Para adicionar um item ao final da lista, recebe apenas um elemento para adicionar por vez, este elemento pode ser uma lista, tupla, dict, set
+                    Traz o interável como ele é, diferente do extend que traz apenas os elementos do interável (Este pode ser uma outra lista, tupla, dict, set)
                     Ex: lista.append([nome,quantidade,preco]) ----> Um elemento apenas ou seja uma lista apenas com 3 valores dentro dela
                     Ex: lista.append([nome,quantidade,preco],{chave:valor}) ----> Não aceita mais de um elemento
 
@@ -194,8 +211,8 @@ FUNÇÕES (METHODS) MAIS UTILIZADAS EM LISTA:
 6  -   insert()   - Para inserir um item de lista em um índice especificado
                     lista.insert(index,object)
 
-7  -   extend()   - Adiciona os elementos de um interável como lista,tupla,dict,string ao final de uma lista, ou seja apenas os elementos não a lista, tupla, dict em si
-                    No dicionário ele só adiciona  apenas o a chave
+7  -   extend()   - Adiciona os elementos de 'um' interável como lista,tupla,dict,string ao final de uma lista, ou seja apenas os elementos não a lista, tupla, dict, set em si
+                    No dicionário ele só adiciona apenas a chave como elemento, não passando o valor
                     Se passar uma string cada caracter desta se torna um índice na lista
 
 8  -   remove()   - Remove o item especificado como por exemplo um caracter, string, number
